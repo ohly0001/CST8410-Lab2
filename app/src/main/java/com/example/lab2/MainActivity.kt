@@ -29,6 +29,21 @@ class MainActivity : ComponentActivity() {
         Log.w(tag, "Started")
     }
 
+    override fun onRestart() {
+        super.onRestart()
+        Log.w(tag, "Restarted")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Log.w(tag, "Paused")
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.w(tag, "Resumed")
+    }
+
     override fun onStop() {
         super.onStop()
         Log.w(tag, "Stopped")
