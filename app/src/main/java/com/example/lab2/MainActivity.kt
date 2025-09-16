@@ -36,7 +36,7 @@ class MainActivity : ComponentActivity() {
                         verticalArrangement = Arrangement.SpaceEvenly){
                         Icon(
                             painter = painterResource(R.drawable.app_icon),
-                            contentDescription = stringResource(id = R.string.icon_caption),
+                            contentDescription = stringResource(R.string.icon_caption),
                             tint = MaterialTheme.colorScheme.primary,
                             modifier = Modifier.sizeIn(maxWidth = 160.dp, maxHeight = 160.dp, minWidth = 60.dp, minHeight = 60.dp)
                         )
