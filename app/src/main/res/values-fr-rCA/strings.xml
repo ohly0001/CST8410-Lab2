@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Robert Lab 2</string>
-    <string name="hello_message">Bonjour tout le monde!</string>
+    <string name="hello_message">Bonjour à tous!</string>
+    <string name="icon_caption">Icône de dragon</string>
 </resources>

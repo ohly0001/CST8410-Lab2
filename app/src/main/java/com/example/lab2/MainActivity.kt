@@ -4,14 +4,19 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.sizeIn
+import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.lab2.ui.theme.AppTheme
 
@@ -23,15 +28,21 @@ class MainActivity : ComponentActivity() {
             AppTheme {
                 Surface(
                     modifier = Modifier.fillMaxSize(),
-                    //error makes it obvious then white and black which matches default scheme
-                    color = MaterialTheme.colorScheme.errorContainer,
-                    contentColor = MaterialTheme.colorScheme.onErrorContainer,
+                    color = MaterialTheme.colorScheme.surface,
+                    contentColor = MaterialTheme.colorScheme.onSurface,
                 )
                 {
-                    Box(contentAlignment = Alignment.Center){
+                    Column(horizontalAlignment = Alignment.CenterHorizontally,
+                        verticalArrangement = Arrangement.SpaceEvenly){
+                        Icon(
+                            painter = painterResource(R.drawable.app_icon),
+                            contentDescription = stringResource(id = R.string.icon_caption),
+                            tint = MaterialTheme.colorScheme.primary,
+                            modifier = Modifier.sizeIn(maxWidth = 160.dp, maxHeight = 160.dp, minWidth = 60.dp, minHeight = 60.dp)
+                        )
                         Text(
                             text = stringResource(R.string.hello_message),
-                            color = MaterialTheme.colorScheme.onErrorContainer,
+                            color = MaterialTheme.colorScheme.secondary,
                             fontSize = 30.sp,
                         )
                     }
