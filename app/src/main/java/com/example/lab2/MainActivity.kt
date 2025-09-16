@@ -1,6 +1,7 @@
 package com.example.lab2
 
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -21,6 +22,23 @@ import androidx.compose.ui.unit.sp
 import com.example.lab2.ui.theme.AppTheme
 
 class MainActivity : ComponentActivity() {
+    val tag = "Main Activity"
+
+    override fun onStart() {
+        super.onStart()
+        Log.w(tag, "Started")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Log.w(tag, "Stopped")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.w(tag, "Destroyed")
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -47,6 +65,7 @@ class MainActivity : ComponentActivity() {
                         )
                     }
                 }
+                Log.w(tag, "Created")
             }
         }
     }
