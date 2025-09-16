@@ -1,0 +1,4 @@
+- Custom App Icon.
+- Customized material3 theme with lightmode and darkmode palettes.
+- Canadian english & french langauge Support.
+- Android API 34+ Configuration
